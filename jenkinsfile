@@ -1,0 +1,10 @@
+node {
+   stage('Prod Deployment on AWS'){
+   sh label: 'terraform', script: '/bin/terraform  init'
+   sh label: 'terraform', script: '/bin/terraform  apply -input=false -auto-approve'
+   }
+}
+
+
+
+
